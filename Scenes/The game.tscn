@@ -1,0 +1,1683 @@
+[gd_scene load_steps=55 format=2]
+
+[ext_resource path="res://Sprites/iPhine1.png" type="Texture" id=1]
+[ext_resource path="res://Script/iPhone.gd" type="Script" id=2]
+[ext_resource path="res://fonts/Pixeboy-z8XGD.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Sprites/Space Cave Tileset.png" type="Texture" id=4]
+[ext_resource path="res://fonts/WayfarersToyBoxRegular-gxxER.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://Script/Main menuu Button.gd" type="Script" id=6]
+[ext_resource path="res://Script/PopupPanel.gd" type="Script" id=7]
+[ext_resource path="res://Script/The Button of Ckeckpoints.gd" type="Script" id=8]
+[ext_resource path="res://Sprites/Spike.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/Checkpoint.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/Space Cave Tileset Warped.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/Trophy.png" type="Texture" id=12]
+[ext_resource path="res://Script/Acheivement Panel.gd" type="Script" id=13]
+[ext_resource path="res://Script/Beat the game.gd" type="Script" id=14]
+[ext_resource path="res://Sprites/LaserSprite.png" type="Texture" id=15]
+[ext_resource path="res://Sprites/LaserSpriteHorizontal.png" type="Texture" id=16]
+[ext_resource path="res://Music and sound effects/Dhalism.wav" type="AudioStream" id=17]
+[ext_resource path="res://Sprites/AmbulanceWEEWOOWEEWOOWEEWOO.png" type="Texture" id=18]
+[ext_resource path="res://Script/PausePanel.gd" type="Script" id=19]
+[ext_resource path="res://Script/PICK THAT UP JOHNNY.gd" type="Script" id=20]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 14.5616, 23.1858 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 50
+font_data = ExtResource( 3 )
+
+[sub_resource type="GDScript" id=4]
+
+[sub_resource type="DynamicFont" id=5]
+size = 32
+use_mipmaps = true
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 20
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=7]
+font_data = ExtResource( 5 )
+
+[sub_resource type="InputEventAction" id=8]
+action = "action_pickup"
+
+[sub_resource type="ShortCut" id=9]
+shortcut = SubResource( 8 )
+
+[sub_resource type="DynamicFont" id=10]
+font_data = ExtResource( 5 )
+
+[sub_resource type="ConvexPolygonShape2D" id=11]
+points = PoolVector2Array( 8, 8, 0, 16, 0, 0, 16, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=12]
+points = PoolVector2Array( 16, 8, 0, 8, 0, 0, 16, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=13]
+points = PoolVector2Array( 0, 0, 16, 0, 0, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=14]
+points = PoolVector2Array( 16, 16, 0, 16, 0, 8, 16, 8 )
+
+[sub_resource type="ConvexPolygonShape2D" id=15]
+points = PoolVector2Array( 16, 16, 0, 16, 0, 8, 16, 8 )
+
+[sub_resource type="ConvexPolygonShape2D" id=16]
+points = PoolVector2Array( 16, 16, 0, 16, 0, 8, 16, 8 )
+
+[sub_resource type="ConvexPolygonShape2D" id=17]
+points = PoolVector2Array( 16, 16, 0, 16, 8, 8, 16, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=18]
+points = PoolVector2Array( 16, 16, 0, 16, 0, 8, 16, 8 )
+
+[sub_resource type="ConvexPolygonShape2D" id=19]
+points = PoolVector2Array( 16, 16, 8, 8, 0, 0, 16, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=20]
+points = PoolVector2Array( 0, 0, 8, 0, 8, 16, 0, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=21]
+points = PoolVector2Array( 0, 0, 8, 0, 8, 16, 0, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=22]
+points = PoolVector2Array( 16, 16, 8, 16, 8, 0, 16, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=23]
+points = PoolVector2Array( 16, 16, 0, 16, 0, 0, 8, 8 )
+
+[sub_resource type="ConvexPolygonShape2D" id=24]
+points = PoolVector2Array( 16, 16, 0, 16, 0, 0, 16, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=25]
+points = PoolVector2Array( 16, 8, 0, 8, 0, 0, 16, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=26]
+points = PoolVector2Array( 16, 16, 0, 16, 0, 8, 16, 8 )
+
+[sub_resource type="ConvexPolygonShape2D" id=27]
+points = PoolVector2Array( 0, 16, 16, 0, 16, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=28]
+points = PoolVector2Array( 16, 16, 0, 16, 0, 0, 16, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=29]
+points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=30]
+points = PoolVector2Array( 0, 0, 16, 16, 0, 16, 0, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=31]
+points = PoolVector2Array( 0, 0, 16, 0, 16, 16 )
+
+[sub_resource type="TileSet" id=32]
+0/name = "Space Cave Tileset.png 0"
+0/texture = ExtResource( 4 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 16, 16 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 11 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 11 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+1/name = "Space Cave Tileset.png 1"
+1/texture = ExtResource( 4 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 16, 0, 16, 16 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape = SubResource( 12 )
+1/shape_one_way = false
+1/shape_one_way_margin = 1.0
+1/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 12 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+1/z_index = 0
+2/name = "Space Cave Tileset.png 2"
+2/texture = ExtResource( 4 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 32, 0, 16, 16 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape = SubResource( 19 )
+2/shape_one_way = false
+2/shape_one_way_margin = 1.0
+2/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 19 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+2/z_index = 0
+3/name = "Space Cave Tileset.png 3"
+3/texture = ExtResource( 4 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 0, 16, 16, 16 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape = SubResource( 20 )
+3/shape_one_way = false
+3/shape_one_way_margin = 1.0
+3/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 20 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 21 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+3/z_index = 0
+4/name = "Space Cave Tileset.png 4"
+4/texture = ExtResource( 4 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 32, 16, 16, 16 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape = SubResource( 22 )
+4/shape_one_way = false
+4/shape_one_way_margin = 1.0
+4/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 22 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+4/z_index = 0
+5/name = "Space Cave Tileset.png 5"
+5/texture = ExtResource( 4 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 0, 32, 16, 16 )
+5/tile_mode = 0
+5/occluder_offset = Vector2( 0, 0 )
+5/navigation_offset = Vector2( 0, 0 )
+5/shape_offset = Vector2( 0, 0 )
+5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+5/shape = SubResource( 23 )
+5/shape_one_way = false
+5/shape_one_way_margin = 1.0
+5/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 23 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+5/z_index = 0
+6/name = "Space Cave Tileset.png 6"
+6/texture = ExtResource( 4 )
+6/tex_offset = Vector2( 0, 0 )
+6/modulate = Color( 1, 1, 1, 1 )
+6/region = Rect2( 16, 32, 16, 16 )
+6/tile_mode = 0
+6/occluder_offset = Vector2( 0, 0 )
+6/navigation_offset = Vector2( 0, 0 )
+6/shape_offset = Vector2( 0, 0 )
+6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+6/shape = SubResource( 26 )
+6/shape_one_way = false
+6/shape_one_way_margin = 1.0
+6/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 26 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+6/z_index = 0
+7/name = "Space Cave Tileset.png 7"
+7/texture = ExtResource( 4 )
+7/tex_offset = Vector2( 0, 0 )
+7/modulate = Color( 1, 1, 1, 1 )
+7/region = Rect2( 48, 0, 16, 16 )
+7/tile_mode = 0
+7/occluder_offset = Vector2( 0, 0 )
+7/navigation_offset = Vector2( 0, 0 )
+7/shape_offset = Vector2( 0, 0 )
+7/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+7/shape = SubResource( 27 )
+7/shape_one_way = false
+7/shape_one_way_margin = 1.0
+7/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 27 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+7/z_index = 0
+8/name = "Space Cave Tileset.png 8"
+8/texture = ExtResource( 4 )
+8/tex_offset = Vector2( 0, 0 )
+8/modulate = Color( 1, 1, 1, 1 )
+8/region = Rect2( 64, 0, 16, 16 )
+8/tile_mode = 0
+8/occluder_offset = Vector2( 0, 0 )
+8/navigation_offset = Vector2( 0, 0 )
+8/shape_offset = Vector2( 0, 0 )
+8/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+8/shape = SubResource( 30 )
+8/shape_one_way = false
+8/shape_one_way_margin = 1.0
+8/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 30 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+8/z_index = 0
+9/name = "Space Cave Tileset.png 9"
+9/texture = ExtResource( 4 )
+9/tex_offset = Vector2( 0, 0 )
+9/modulate = Color( 1, 1, 1, 1 )
+9/region = Rect2( 48, 16, 16, 16 )
+9/tile_mode = 0
+9/occluder_offset = Vector2( 0, 0 )
+9/navigation_offset = Vector2( 0, 0 )
+9/shape_offset = Vector2( 0, 0 )
+9/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+9/shape = SubResource( 31 )
+9/shape_one_way = false
+9/shape_one_way_margin = 1.0
+9/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 31 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+9/z_index = 0
+10/name = "Space Cave Tileset.png 10"
+10/texture = ExtResource( 4 )
+10/tex_offset = Vector2( 0, 0 )
+10/modulate = Color( 1, 1, 1, 1 )
+10/region = Rect2( 64, 16, 16, 16 )
+10/tile_mode = 0
+10/occluder_offset = Vector2( 0, 0 )
+10/navigation_offset = Vector2( 0, 0 )
+10/shape_offset = Vector2( 0, 0 )
+10/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+10/shape = SubResource( 13 )
+10/shape_one_way = false
+10/shape_one_way_margin = 1.0
+10/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 13 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+10/z_index = 0
+11/name = "Space Cave Tileset.png 11"
+11/texture = ExtResource( 4 )
+11/tex_offset = Vector2( 0, 0 )
+11/modulate = Color( 1, 1, 1, 1 )
+11/region = Rect2( 96, 0, 16, 16 )
+11/tile_mode = 0
+11/occluder_offset = Vector2( 0, 0 )
+11/navigation_offset = Vector2( 0, 0 )
+11/shape_offset = Vector2( 0, 0 )
+11/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+11/shape = SubResource( 14 )
+11/shape_one_way = true
+11/shape_one_way_margin = 1.0
+11/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": true,
+"one_way_margin": 1.0,
+"shape": SubResource( 14 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+11/z_index = 0
+12/name = "Space Cave Tileset.png 12"
+12/texture = ExtResource( 4 )
+12/tex_offset = Vector2( 0, 0 )
+12/modulate = Color( 1, 1, 1, 1 )
+12/region = Rect2( 80, 16, 16, 16 )
+12/tile_mode = 0
+12/occluder_offset = Vector2( 0, 0 )
+12/navigation_offset = Vector2( 0, 0 )
+12/shape_offset = Vector2( 0, 0 )
+12/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+12/shape = SubResource( 15 )
+12/shape_one_way = true
+12/shape_one_way_margin = 1.0
+12/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": true,
+"one_way_margin": 1.0,
+"shape": SubResource( 15 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+12/z_index = 0
+13/name = "Space Cave Tileset.png 13"
+13/texture = ExtResource( 4 )
+13/tex_offset = Vector2( 0, 0 )
+13/modulate = Color( 1, 1, 1, 1 )
+13/region = Rect2( 96, 16, 16, 16 )
+13/tile_mode = 0
+13/occluder_offset = Vector2( 0, 0 )
+13/navigation_offset = Vector2( 0, 0 )
+13/shape_offset = Vector2( 0, 0 )
+13/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+13/shape = SubResource( 16 )
+13/shape_one_way = true
+13/shape_one_way_margin = 1.0
+13/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": true,
+"one_way_margin": 1.0,
+"shape": SubResource( 16 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+13/z_index = 0
+14/name = "Space Cave Tileset.png 14"
+14/texture = ExtResource( 4 )
+14/tex_offset = Vector2( 0, 0 )
+14/modulate = Color( 1, 1, 1, 1 )
+14/region = Rect2( 32, 32, 16, 16 )
+14/tile_mode = 0
+14/occluder_offset = Vector2( 0, 0 )
+14/navigation_offset = Vector2( 0, 0 )
+14/shape_offset = Vector2( 0, 0 )
+14/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+14/shape = SubResource( 17 )
+14/shape_one_way = false
+14/shape_one_way_margin = 1.0
+14/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 17 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+14/z_index = 0
+15/name = "Space Cave Tileset.png 15"
+15/texture = ExtResource( 4 )
+15/tex_offset = Vector2( 0, 0 )
+15/modulate = Color( 1, 1, 1, 1 )
+15/region = Rect2( 112, 16, 16, 16 )
+15/tile_mode = 0
+15/occluder_offset = Vector2( 0, 0 )
+15/navigation_offset = Vector2( 0, 0 )
+15/shape_offset = Vector2( 0, 0 )
+15/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+15/shape = SubResource( 18 )
+15/shape_one_way = true
+15/shape_one_way_margin = 1.0
+15/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": true,
+"one_way_margin": 1.0,
+"shape": SubResource( 18 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+15/z_index = 0
+16/name = "Space Cave Tileset.png 16"
+16/texture = ExtResource( 4 )
+16/tex_offset = Vector2( 0, 0 )
+16/modulate = Color( 1, 1, 1, 1 )
+16/region = Rect2( 0, 48, 16, 16 )
+16/tile_mode = 0
+16/occluder_offset = Vector2( 0, 0 )
+16/navigation_offset = Vector2( 0, 0 )
+16/shape_offset = Vector2( 0, 0 )
+16/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+16/shape_one_way = false
+16/shape_one_way_margin = 0.0
+16/shapes = [  ]
+16/z_index = 0
+17/name = "Space Cave Tileset.png 17"
+17/texture = ExtResource( 4 )
+17/tex_offset = Vector2( 0, 0 )
+17/modulate = Color( 1, 1, 1, 1 )
+17/region = Rect2( 16, 48, 16, 16 )
+17/tile_mode = 0
+17/occluder_offset = Vector2( 0, 0 )
+17/navigation_offset = Vector2( 0, 0 )
+17/shape_offset = Vector2( 0, 0 )
+17/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+17/shape_one_way = false
+17/shape_one_way_margin = 0.0
+17/shapes = [  ]
+17/z_index = 0
+18/name = "Space Cave Tileset.png 18"
+18/texture = ExtResource( 4 )
+18/tex_offset = Vector2( 0, 0 )
+18/modulate = Color( 1, 1, 1, 1 )
+18/region = Rect2( 32, 48, 16, 16 )
+18/tile_mode = 0
+18/occluder_offset = Vector2( 0, 0 )
+18/navigation_offset = Vector2( 0, 0 )
+18/shape_offset = Vector2( 0, 0 )
+18/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+18/shape_one_way = false
+18/shape_one_way_margin = 0.0
+18/shapes = [  ]
+18/z_index = 0
+19/name = "Space Cave Tileset.png 19"
+19/texture = ExtResource( 4 )
+19/tex_offset = Vector2( 0, 0 )
+19/modulate = Color( 1, 1, 1, 1 )
+19/region = Rect2( 0, 64, 16, 16 )
+19/tile_mode = 0
+19/occluder_offset = Vector2( 0, 0 )
+19/navigation_offset = Vector2( 0, 0 )
+19/shape_offset = Vector2( 0, 0 )
+19/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+19/shape_one_way = false
+19/shape_one_way_margin = 0.0
+19/shapes = [  ]
+19/z_index = 0
+20/name = "Space Cave Tileset.png 20"
+20/texture = ExtResource( 4 )
+20/tex_offset = Vector2( 0, 0 )
+20/modulate = Color( 1, 1, 1, 1 )
+20/region = Rect2( 32, 64, 16, 16 )
+20/tile_mode = 0
+20/occluder_offset = Vector2( 0, 0 )
+20/navigation_offset = Vector2( 0, 0 )
+20/shape_offset = Vector2( 0, 0 )
+20/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+20/shape_one_way = false
+20/shape_one_way_margin = 0.0
+20/shapes = [  ]
+20/z_index = 0
+21/name = "Space Cave Tileset.png 21"
+21/texture = ExtResource( 4 )
+21/tex_offset = Vector2( 0, 0 )
+21/modulate = Color( 1, 1, 1, 1 )
+21/region = Rect2( 0, 80, 16, 16 )
+21/tile_mode = 0
+21/occluder_offset = Vector2( 0, 0 )
+21/navigation_offset = Vector2( 0, 0 )
+21/shape_offset = Vector2( 0, 0 )
+21/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+21/shape_one_way = false
+21/shape_one_way_margin = 0.0
+21/shapes = [  ]
+21/z_index = 0
+22/name = "Space Cave Tileset.png 22"
+22/texture = ExtResource( 4 )
+22/tex_offset = Vector2( 0, 0 )
+22/modulate = Color( 1, 1, 1, 1 )
+22/region = Rect2( 16, 80, 16, 16 )
+22/tile_mode = 0
+22/occluder_offset = Vector2( 0, 0 )
+22/navigation_offset = Vector2( 0, 0 )
+22/shape_offset = Vector2( 0, 0 )
+22/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+22/shape_one_way = false
+22/shape_one_way_margin = 0.0
+22/shapes = [  ]
+22/z_index = 0
+23/name = "Space Cave Tileset.png 23"
+23/texture = ExtResource( 4 )
+23/tex_offset = Vector2( 0, 0 )
+23/modulate = Color( 1, 1, 1, 1 )
+23/region = Rect2( 32, 80, 16, 16 )
+23/tile_mode = 0
+23/occluder_offset = Vector2( 0, 0 )
+23/navigation_offset = Vector2( 0, 0 )
+23/shape_offset = Vector2( 0, 0 )
+23/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+23/shape_one_way = false
+23/shape_one_way_margin = 0.0
+23/shapes = [  ]
+23/z_index = 0
+24/name = "Space Cave Tileset.png 24"
+24/texture = ExtResource( 4 )
+24/tex_offset = Vector2( 0, 0 )
+24/modulate = Color( 1, 1, 1, 1 )
+24/region = Rect2( 48, 48, 16, 16 )
+24/tile_mode = 0
+24/occluder_offset = Vector2( 0, 0 )
+24/navigation_offset = Vector2( 0, 0 )
+24/shape_offset = Vector2( 0, 0 )
+24/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+24/shape_one_way = false
+24/shape_one_way_margin = 0.0
+24/shapes = [  ]
+24/z_index = 0
+25/name = "Space Cave Tileset.png 25"
+25/texture = ExtResource( 4 )
+25/tex_offset = Vector2( 0, 0 )
+25/modulate = Color( 1, 1, 1, 1 )
+25/region = Rect2( 64, 48, 16, 16 )
+25/tile_mode = 0
+25/occluder_offset = Vector2( 0, 0 )
+25/navigation_offset = Vector2( 0, 0 )
+25/shape_offset = Vector2( 0, 0 )
+25/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+25/shape_one_way = false
+25/shape_one_way_margin = 0.0
+25/shapes = [  ]
+25/z_index = 0
+26/name = "Space Cave Tileset.png 26"
+26/texture = ExtResource( 4 )
+26/tex_offset = Vector2( 0, 0 )
+26/modulate = Color( 1, 1, 1, 1 )
+26/region = Rect2( 48, 64, 16, 16 )
+26/tile_mode = 0
+26/occluder_offset = Vector2( 0, 0 )
+26/navigation_offset = Vector2( 0, 0 )
+26/shape_offset = Vector2( 0, 0 )
+26/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+26/shape_one_way = false
+26/shape_one_way_margin = 0.0
+26/shapes = [  ]
+26/z_index = 0
+27/name = "Space Cave Tileset.png 27"
+27/texture = ExtResource( 4 )
+27/tex_offset = Vector2( 0, 0 )
+27/modulate = Color( 1, 1, 1, 1 )
+27/region = Rect2( 64, 64, 16, 16 )
+27/tile_mode = 0
+27/occluder_offset = Vector2( 0, 0 )
+27/navigation_offset = Vector2( 0, 0 )
+27/shape_offset = Vector2( 0, 0 )
+27/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+27/shape_one_way = false
+27/shape_one_way_margin = 0.0
+27/shapes = [  ]
+27/z_index = 0
+28/name = "Space Cave Tileset.png 28"
+28/texture = ExtResource( 4 )
+28/tex_offset = Vector2( 0, 0 )
+28/modulate = Color( 1, 1, 1, 1 )
+28/region = Rect2( 80, 48, 16, 16 )
+28/tile_mode = 0
+28/occluder_offset = Vector2( 0, 0 )
+28/navigation_offset = Vector2( 0, 0 )
+28/shape_offset = Vector2( 0, 0 )
+28/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+28/shape_one_way = false
+28/shape_one_way_margin = 0.0
+28/shapes = [  ]
+28/z_index = 0
+29/name = "Space Cave Tileset.png 29"
+29/texture = ExtResource( 4 )
+29/tex_offset = Vector2( 0, 0 )
+29/modulate = Color( 1, 1, 1, 1 )
+29/region = Rect2( 96, 48, 16, 16 )
+29/tile_mode = 0
+29/occluder_offset = Vector2( 0, 0 )
+29/navigation_offset = Vector2( 0, 0 )
+29/shape_offset = Vector2( 0, 0 )
+29/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+29/shape_one_way = false
+29/shape_one_way_margin = 0.0
+29/shapes = [  ]
+29/z_index = 0
+30/name = "Space Cave Tileset.png 30"
+30/texture = ExtResource( 4 )
+30/tex_offset = Vector2( 0, 0 )
+30/modulate = Color( 1, 1, 1, 1 )
+30/region = Rect2( 112, 48, 16, 16 )
+30/tile_mode = 0
+30/occluder_offset = Vector2( 0, 0 )
+30/navigation_offset = Vector2( 0, 0 )
+30/shape_offset = Vector2( 0, 0 )
+30/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+30/shape_one_way = false
+30/shape_one_way_margin = 0.0
+30/shapes = [  ]
+30/z_index = 0
+31/name = "Space Cave Tileset.png 31"
+31/texture = ExtResource( 4 )
+31/tex_offset = Vector2( 0, 0 )
+31/modulate = Color( 1, 1, 1, 1 )
+31/region = Rect2( 48, 32, 16, 16 )
+31/tile_mode = 0
+31/occluder_offset = Vector2( 0, 0 )
+31/navigation_offset = Vector2( 0, 0 )
+31/shape_offset = Vector2( 0, 0 )
+31/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+31/shape_one_way = false
+31/shape_one_way_margin = 0.0
+31/shapes = [  ]
+31/z_index = 0
+32/name = "Space Cave Tileset.png 32"
+32/texture = ExtResource( 4 )
+32/tex_offset = Vector2( 0, 0 )
+32/modulate = Color( 1, 1, 1, 1 )
+32/region = Rect2( 64, 32, 16, 16 )
+32/tile_mode = 0
+32/occluder_offset = Vector2( 0, 0 )
+32/navigation_offset = Vector2( 0, 0 )
+32/shape_offset = Vector2( 0, 0 )
+32/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+32/shape_one_way = false
+32/shape_one_way_margin = 0.0
+32/shapes = [  ]
+32/z_index = 0
+33/name = "Space Cave Tileset.png 33"
+33/texture = ExtResource( 4 )
+33/tex_offset = Vector2( 0, 0 )
+33/modulate = Color( 1, 1, 1, 1 )
+33/region = Rect2( 80, 32, 16, 16 )
+33/tile_mode = 0
+33/occluder_offset = Vector2( 0, 0 )
+33/navigation_offset = Vector2( 0, 0 )
+33/shape_offset = Vector2( 0, 0 )
+33/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+33/shape_one_way = false
+33/shape_one_way_margin = 0.0
+33/shapes = [  ]
+33/z_index = 0
+34/name = "Space Cave Tileset.png 34"
+34/texture = ExtResource( 4 )
+34/tex_offset = Vector2( 0, 0 )
+34/modulate = Color( 1, 1, 1, 1 )
+34/region = Rect2( 96, 32, 16, 16 )
+34/tile_mode = 0
+34/occluder_offset = Vector2( 0, 0 )
+34/navigation_offset = Vector2( 0, 0 )
+34/shape_offset = Vector2( 0, 0 )
+34/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+34/shape_one_way = false
+34/shape_one_way_margin = 0.0
+34/shapes = [  ]
+34/z_index = 0
+35/name = "Space Cave Tileset.png 35"
+35/texture = ExtResource( 4 )
+35/tex_offset = Vector2( 0, 0 )
+35/modulate = Color( 1, 1, 1, 1 )
+35/region = Rect2( 0, 96, 16, 16 )
+35/tile_mode = 0
+35/occluder_offset = Vector2( 0, 0 )
+35/navigation_offset = Vector2( 0, 0 )
+35/shape_offset = Vector2( 0, 0 )
+35/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+35/shape_one_way = false
+35/shape_one_way_margin = 0.0
+35/shapes = [  ]
+35/z_index = 0
+36/name = "Space Cave Tileset.png 36"
+36/texture = ExtResource( 4 )
+36/tex_offset = Vector2( 0, 0 )
+36/modulate = Color( 1, 1, 1, 1 )
+36/region = Rect2( 0, 112, 16, 16 )
+36/tile_mode = 0
+36/occluder_offset = Vector2( 0, 0 )
+36/navigation_offset = Vector2( 0, 0 )
+36/shape_offset = Vector2( 0, 0 )
+36/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+36/shape_one_way = false
+36/shape_one_way_margin = 0.0
+36/shapes = [  ]
+36/z_index = 0
+37/name = "Space Cave Tileset.png 37"
+37/texture = ExtResource( 4 )
+37/tex_offset = Vector2( 0, 0 )
+37/modulate = Color( 1, 1, 1, 1 )
+37/region = Rect2( 16, 112, 16, 16 )
+37/tile_mode = 0
+37/occluder_offset = Vector2( 0, 0 )
+37/navigation_offset = Vector2( 0, 0 )
+37/shape_offset = Vector2( 0, 0 )
+37/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+37/shape_one_way = false
+37/shape_one_way_margin = 0.0
+37/shapes = [  ]
+37/z_index = 0
+38/name = "Space Cave Tileset.png 38"
+38/texture = ExtResource( 4 )
+38/tex_offset = Vector2( 0, 0 )
+38/modulate = Color( 1, 1, 1, 1 )
+38/region = Rect2( 16, 96, 16, 16 )
+38/tile_mode = 0
+38/occluder_offset = Vector2( 0, 0 )
+38/navigation_offset = Vector2( 0, 0 )
+38/shape_offset = Vector2( 0, 0 )
+38/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+38/shape_one_way = false
+38/shape_one_way_margin = 0.0
+38/shapes = [  ]
+38/z_index = 0
+39/name = "Space Cave Tileset.png 39"
+39/texture = ExtResource( 4 )
+39/tex_offset = Vector2( 0, 0 )
+39/modulate = Color( 1, 1, 1, 1 )
+39/region = Rect2( 32, 96, 16, 16 )
+39/tile_mode = 0
+39/occluder_offset = Vector2( 0, 0 )
+39/navigation_offset = Vector2( 0, 0 )
+39/shape_offset = Vector2( 0, 0 )
+39/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+39/shape_one_way = false
+39/shape_one_way_margin = 0.0
+39/shapes = [  ]
+39/z_index = 0
+40/name = "Space Cave Tileset.png 40"
+40/texture = ExtResource( 4 )
+40/tex_offset = Vector2( 0, 0 )
+40/modulate = Color( 1, 1, 1, 1 )
+40/region = Rect2( 32, 112, 16, 16 )
+40/tile_mode = 0
+40/occluder_offset = Vector2( 0, 0 )
+40/navigation_offset = Vector2( 0, 0 )
+40/shape_offset = Vector2( 0, 0 )
+40/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+40/shape_one_way = false
+40/shape_one_way_margin = 0.0
+40/shapes = [  ]
+40/z_index = 0
+41/name = "Space Cave Tileset.png 41"
+41/texture = ExtResource( 4 )
+41/tex_offset = Vector2( 0, 0 )
+41/modulate = Color( 1, 1, 1, 1 )
+41/region = Rect2( 48, 112, 16, 16 )
+41/tile_mode = 0
+41/occluder_offset = Vector2( 0, 0 )
+41/navigation_offset = Vector2( 0, 0 )
+41/shape_offset = Vector2( 0, 0 )
+41/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+41/shape_one_way = false
+41/shape_one_way_margin = 0.0
+41/shapes = [  ]
+41/z_index = 0
+42/name = "Space Cave Tileset.png 42"
+42/texture = ExtResource( 4 )
+42/tex_offset = Vector2( 0, 0 )
+42/modulate = Color( 1, 1, 1, 1 )
+42/region = Rect2( 64, 112, 16, 16 )
+42/tile_mode = 0
+42/occluder_offset = Vector2( 0, 0 )
+42/navigation_offset = Vector2( 0, 0 )
+42/shape_offset = Vector2( 0, 0 )
+42/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+42/shape_one_way = false
+42/shape_one_way_margin = 0.0
+42/shapes = [  ]
+42/z_index = 0
+43/name = "Space Cave Tileset.png 43"
+43/texture = ExtResource( 4 )
+43/tex_offset = Vector2( 0, 0 )
+43/modulate = Color( 1, 1, 1, 1 )
+43/region = Rect2( 64, 96, 16, 16 )
+43/tile_mode = 0
+43/occluder_offset = Vector2( 0, 0 )
+43/navigation_offset = Vector2( 0, 0 )
+43/shape_offset = Vector2( 0, 0 )
+43/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+43/shape_one_way = false
+43/shape_one_way_margin = 0.0
+43/shapes = [  ]
+43/z_index = 0
+44/name = "Space Cave Tileset.png 44"
+44/texture = ExtResource( 4 )
+44/tex_offset = Vector2( 0, 0 )
+44/modulate = Color( 1, 1, 1, 1 )
+44/region = Rect2( 80, 112, 16, 16 )
+44/tile_mode = 0
+44/occluder_offset = Vector2( 0, 0 )
+44/navigation_offset = Vector2( 0, 0 )
+44/shape_offset = Vector2( 0, 0 )
+44/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+44/shape_one_way = false
+44/shape_one_way_margin = 0.0
+44/shapes = [  ]
+44/z_index = 0
+45/name = "Space Cave Tileset.png 45"
+45/texture = ExtResource( 4 )
+45/tex_offset = Vector2( 0, 0 )
+45/modulate = Color( 1, 1, 1, 1 )
+45/region = Rect2( 96, 112, 16, 16 )
+45/tile_mode = 0
+45/occluder_offset = Vector2( 0, 0 )
+45/navigation_offset = Vector2( 0, 0 )
+45/shape_offset = Vector2( 0, 0 )
+45/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+45/shape_one_way = false
+45/shape_one_way_margin = 0.0
+45/shapes = [  ]
+45/z_index = 0
+46/name = "Space Cave Tileset.png 46"
+46/texture = ExtResource( 4 )
+46/tex_offset = Vector2( 0, 0 )
+46/modulate = Color( 1, 1, 1, 1 )
+46/region = Rect2( 128, 0, 16, 16 )
+46/tile_mode = 0
+46/occluder_offset = Vector2( 0, 0 )
+46/navigation_offset = Vector2( 0, 0 )
+46/shape_offset = Vector2( 0, 0 )
+46/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+46/shape_one_way = false
+46/shape_one_way_margin = 0.0
+46/shapes = [  ]
+46/z_index = 0
+47/name = "Space Cave Tileset.png 47"
+47/texture = ExtResource( 4 )
+47/tex_offset = Vector2( 0, 0 )
+47/modulate = Color( 1, 1, 1, 1 )
+47/region = Rect2( 144, 0, 16, 16 )
+47/tile_mode = 0
+47/occluder_offset = Vector2( 0, 0 )
+47/navigation_offset = Vector2( 0, 0 )
+47/shape_offset = Vector2( 0, 0 )
+47/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+47/shape_one_way = false
+47/shape_one_way_margin = 0.0
+47/shapes = [  ]
+47/z_index = 0
+48/name = "Space Cave Tileset.png 48"
+48/texture = ExtResource( 4 )
+48/tex_offset = Vector2( 0, 0 )
+48/modulate = Color( 1, 1, 1, 1 )
+48/region = Rect2( 128, 16, 16, 16 )
+48/tile_mode = 0
+48/occluder_offset = Vector2( 0, 0 )
+48/navigation_offset = Vector2( 0, 0 )
+48/shape_offset = Vector2( 0, 0 )
+48/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+48/shape_one_way = false
+48/shape_one_way_margin = 0.0
+48/shapes = [  ]
+48/z_index = 0
+49/name = "Space Cave Tileset.png 49"
+49/texture = ExtResource( 4 )
+49/tex_offset = Vector2( 0, 0 )
+49/modulate = Color( 1, 1, 1, 1 )
+49/region = Rect2( 144, 16, 16, 16 )
+49/tile_mode = 0
+49/occluder_offset = Vector2( 0, 0 )
+49/navigation_offset = Vector2( 0, 0 )
+49/shape_offset = Vector2( 0, 0 )
+49/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+49/shape_one_way = false
+49/shape_one_way_margin = 0.0
+49/shapes = [  ]
+49/z_index = 0
+50/name = "Space Cave Tileset.png 50"
+50/texture = ExtResource( 4 )
+50/tex_offset = Vector2( 0, 0 )
+50/modulate = Color( 1, 1, 1, 1 )
+50/region = Rect2( 0, 0, 16, 16 )
+50/tile_mode = 0
+50/occluder_offset = Vector2( 0, 0 )
+50/navigation_offset = Vector2( 0, 0 )
+50/shape_offset = Vector2( 0, 0 )
+50/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+50/shape_one_way = false
+50/shape_one_way_margin = 0.0
+50/shapes = [  ]
+50/z_index = 0
+51/name = "Spike.png 51"
+51/texture = ExtResource( 9 )
+51/tex_offset = Vector2( 0, 0 )
+51/modulate = Color( 1, 1, 1, 1 )
+51/region = Rect2( 0, 0, 16, 16 )
+51/tile_mode = 0
+51/occluder_offset = Vector2( 0, 0 )
+51/navigation_offset = Vector2( 0, 0 )
+51/shape_offset = Vector2( 0, 0 )
+51/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+51/shape_one_way = false
+51/shape_one_way_margin = 0.0
+51/shapes = [  ]
+51/z_index = 0
+52/name = "Checkpoint.png 52"
+52/texture = ExtResource( 10 )
+52/tex_offset = Vector2( 0, 0 )
+52/modulate = Color( 1, 1, 1, 1 )
+52/region = Rect2( 0, 0, 16, 16 )
+52/tile_mode = 0
+52/occluder_offset = Vector2( 0, 0 )
+52/navigation_offset = Vector2( 0, 0 )
+52/shape_offset = Vector2( 0, 0 )
+52/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+52/shape_one_way = false
+52/shape_one_way_margin = 0.0
+52/shapes = [  ]
+52/z_index = 0
+53/name = "Space Cave Tileset.png 53"
+53/texture = ExtResource( 4 )
+53/tex_offset = Vector2( 0, 0 )
+53/modulate = Color( 1, 1, 1, 1 )
+53/region = Rect2( 48, 144, 16, 16 )
+53/tile_mode = 0
+53/occluder_offset = Vector2( 0, 0 )
+53/navigation_offset = Vector2( 0, 0 )
+53/shape_offset = Vector2( 0, 0 )
+53/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+53/shape = SubResource( 24 )
+53/shape_one_way = false
+53/shape_one_way_margin = 1.0
+53/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 24 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+53/z_index = 0
+54/name = "Upgrade machine.png 54"
+54/texture = ExtResource( 4 )
+54/tex_offset = Vector2( 0, 0 )
+54/modulate = Color( 1, 1, 1, 1 )
+54/region = Rect2( 64, 144, 16, 16 )
+54/tile_mode = 0
+54/occluder_offset = Vector2( 0, 0 )
+54/navigation_offset = Vector2( 0, 0 )
+54/shape_offset = Vector2( 0, 0 )
+54/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+54/shape_one_way = false
+54/shape_one_way_margin = 0.0
+54/shapes = [  ]
+54/z_index = 0
+55/name = "Space Cave Tileset.png 55"
+55/texture = ExtResource( 4 )
+55/tex_offset = Vector2( 0, 0 )
+55/modulate = Color( 1, 1, 1, 1 )
+55/region = Rect2( 80, 144, 16, 16 )
+55/tile_mode = 0
+55/occluder_offset = Vector2( 0, 0 )
+55/navigation_offset = Vector2( 0, 0 )
+55/shape_offset = Vector2( 0, 0 )
+55/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+55/shape_one_way = false
+55/shape_one_way_margin = 0.0
+55/shapes = [  ]
+55/z_index = 0
+56/name = "Space Cave Tileset.png 56"
+56/texture = ExtResource( 4 )
+56/tex_offset = Vector2( 0, 0 )
+56/modulate = Color( 1, 1, 1, 1 )
+56/region = Rect2( 96, 144, 16, 16 )
+56/tile_mode = 0
+56/occluder_offset = Vector2( 0, 0 )
+56/navigation_offset = Vector2( 0, 0 )
+56/shape_offset = Vector2( 0, 0 )
+56/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+56/shape_one_way = false
+56/shape_one_way_margin = 0.0
+56/shapes = [  ]
+56/z_index = 0
+57/name = "Space Cave Tileset.png 57"
+57/texture = ExtResource( 4 )
+57/tex_offset = Vector2( 0, 0 )
+57/modulate = Color( 1, 1, 1, 1 )
+57/region = Rect2( 0, 152, 16, 8 )
+57/tile_mode = 0
+57/occluder_offset = Vector2( 0, 0 )
+57/navigation_offset = Vector2( 0, 0 )
+57/shape_offset = Vector2( 0, 0 )
+57/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+57/shape = SubResource( 25 )
+57/shape_one_way = false
+57/shape_one_way_margin = 1.0
+57/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 25 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+57/z_index = 0
+58/name = "Space Cave Tileset.png 58"
+58/texture = ExtResource( 4 )
+58/tex_offset = Vector2( 0, 0 )
+58/modulate = Color( 1, 1, 1, 1 )
+58/region = Rect2( 0, 128, 16, 16 )
+58/tile_mode = 0
+58/occluder_offset = Vector2( 0, 0 )
+58/navigation_offset = Vector2( 0, 0 )
+58/shape_offset = Vector2( 0, 0 )
+58/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+58/shape_one_way = false
+58/shape_one_way_margin = 0.0
+58/shapes = [  ]
+58/z_index = 0
+59/name = "Space Cave Tileset.png 59"
+59/texture = ExtResource( 4 )
+59/tex_offset = Vector2( 0, 0 )
+59/modulate = Color( 1, 1, 1, 1 )
+59/region = Rect2( 16, 128, 16, 16 )
+59/tile_mode = 0
+59/occluder_offset = Vector2( 0, 0 )
+59/navigation_offset = Vector2( 0, 0 )
+59/shape_offset = Vector2( 0, 0 )
+59/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+59/shape_one_way = false
+59/shape_one_way_margin = 0.0
+59/shapes = [  ]
+59/z_index = 0
+60/name = "Space Cave Tileset.png 60"
+60/texture = ExtResource( 4 )
+60/tex_offset = Vector2( 0, 0 )
+60/modulate = Color( 1, 1, 1, 1 )
+60/region = Rect2( 32, 136, 16, 8 )
+60/tile_mode = 0
+60/occluder_offset = Vector2( 0, 0 )
+60/navigation_offset = Vector2( 0, 0 )
+60/shape_offset = Vector2( 0, 0 )
+60/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+60/shape_one_way = false
+60/shape_one_way_margin = 0.0
+60/shapes = [  ]
+60/z_index = 0
+61/name = "Space Cave Tileset.png 61"
+61/texture = ExtResource( 4 )
+61/tex_offset = Vector2( 0, 0 )
+61/modulate = Color( 1, 1, 1, 1 )
+61/region = Rect2( 16, 152, 16, 8 )
+61/tile_mode = 0
+61/occluder_offset = Vector2( 0, 0 )
+61/navigation_offset = Vector2( 0, 0 )
+61/shape_offset = Vector2( 0, 0 )
+61/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+61/shape_one_way = false
+61/shape_one_way_margin = 0.0
+61/shapes = [  ]
+61/z_index = 0
+62/name = "Space Cave Tileset.png 62"
+62/texture = ExtResource( 4 )
+62/tex_offset = Vector2( 0, 0 )
+62/modulate = Color( 1, 1, 1, 1 )
+62/region = Rect2( 32, 152, 16, 8 )
+62/tile_mode = 0
+62/occluder_offset = Vector2( 0, 0 )
+62/navigation_offset = Vector2( 0, 0 )
+62/shape_offset = Vector2( 0, 0 )
+62/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+62/shape_one_way = false
+62/shape_one_way_margin = 0.0
+62/shapes = [  ]
+62/z_index = 0
+63/name = "Space Cave Tileset.png 63"
+63/texture = ExtResource( 4 )
+63/tex_offset = Vector2( 0, 0 )
+63/modulate = Color( 1, 1, 1, 1 )
+63/region = Rect2( 128, 48, 16, 48 )
+63/tile_mode = 0
+63/occluder_offset = Vector2( 0, 0 )
+63/navigation_offset = Vector2( 0, 0 )
+63/shape_offset = Vector2( 0, 0 )
+63/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+63/shape_one_way = false
+63/shape_one_way_margin = 0.0
+63/shapes = [  ]
+63/z_index = 0
+64/name = "Space Cave Tileset.png 64"
+64/texture = ExtResource( 4 )
+64/tex_offset = Vector2( 0, 0 )
+64/modulate = Color( 1, 1, 1, 1 )
+64/region = Rect2( 112, 96, 32, 16 )
+64/tile_mode = 0
+64/occluder_offset = Vector2( 0, 0 )
+64/navigation_offset = Vector2( 0, 0 )
+64/shape_offset = Vector2( 0, 0 )
+64/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+64/shape_one_way = false
+64/shape_one_way_margin = 0.0
+64/shapes = [  ]
+64/z_index = 0
+65/name = "Space Cave Tileset.png 65"
+65/texture = ExtResource( 4 )
+65/tex_offset = Vector2( 0, 0 )
+65/modulate = Color( 1, 1, 1, 1 )
+65/region = Rect2( 80, 96, 32, 16 )
+65/tile_mode = 0
+65/occluder_offset = Vector2( 0, 0 )
+65/navigation_offset = Vector2( 0, 0 )
+65/shape_offset = Vector2( 0, 0 )
+65/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+65/shape_one_way = false
+65/shape_one_way_margin = 0.0
+65/shapes = [  ]
+65/z_index = 0
+66/name = "Space Cave Tileset.png 66"
+66/texture = ExtResource( 4 )
+66/tex_offset = Vector2( 0, 0 )
+66/modulate = Color( 1, 1, 1, 1 )
+66/region = Rect2( 160, 16, 16, 16 )
+66/tile_mode = 0
+66/occluder_offset = Vector2( 0, 0 )
+66/navigation_offset = Vector2( 0, 0 )
+66/shape_offset = Vector2( 0, 0 )
+66/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+66/shape_one_way = false
+66/shape_one_way_margin = 0.0
+66/shapes = [  ]
+66/z_index = 0
+67/name = "Space Cave Tileset.png 67"
+67/texture = ExtResource( 4 )
+67/tex_offset = Vector2( 0, 0 )
+67/modulate = Color( 1, 1, 1, 1 )
+67/region = Rect2( 144, 32, 16, 16 )
+67/tile_mode = 0
+67/occluder_offset = Vector2( 0, 0 )
+67/navigation_offset = Vector2( 0, 0 )
+67/shape_offset = Vector2( 0, 0 )
+67/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+67/shape_one_way = false
+67/shape_one_way_margin = 0.0
+67/shapes = [  ]
+67/z_index = 0
+68/name = "Space Cave Tileset Warped.png 68"
+68/texture = ExtResource( 11 )
+68/tex_offset = Vector2( 0, 0 )
+68/modulate = Color( 1, 1, 1, 1 )
+68/region = Rect2( 0, 16, 16, 16 )
+68/tile_mode = 0
+68/occluder_offset = Vector2( 0, 0 )
+68/navigation_offset = Vector2( 0, 0 )
+68/shape_offset = Vector2( 0, 0 )
+68/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+68/shape_one_way = false
+68/shape_one_way_margin = 0.0
+68/shapes = [  ]
+68/z_index = 0
+69/name = "Space Cave Tileset Warped.png 69"
+69/texture = ExtResource( 11 )
+69/tex_offset = Vector2( 0, 0 )
+69/modulate = Color( 1, 1, 1, 1 )
+69/region = Rect2( 32, 16, 16, 16 )
+69/tile_mode = 0
+69/occluder_offset = Vector2( 0, 0 )
+69/navigation_offset = Vector2( 0, 0 )
+69/shape_offset = Vector2( 0, 0 )
+69/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+69/shape_one_way = false
+69/shape_one_way_margin = 0.0
+69/shapes = [  ]
+69/z_index = 0
+70/name = "Space Cave Tileset Warped.png 70"
+70/texture = ExtResource( 11 )
+70/tex_offset = Vector2( 0, 0 )
+70/modulate = Color( 1, 1, 1, 1 )
+70/region = Rect2( 16, 0, 16, 16 )
+70/tile_mode = 0
+70/occluder_offset = Vector2( 0, 0 )
+70/navigation_offset = Vector2( 0, 0 )
+70/shape_offset = Vector2( 0, 0 )
+70/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+70/shape_one_way = false
+70/shape_one_way_margin = 0.0
+70/shapes = [  ]
+70/z_index = 0
+71/name = "Space Cave Tileset Warped.png 71"
+71/texture = ExtResource( 11 )
+71/tex_offset = Vector2( 0, 0 )
+71/modulate = Color( 1, 1, 1, 1 )
+71/region = Rect2( 16, 32, 16, 16 )
+71/tile_mode = 0
+71/occluder_offset = Vector2( 0, 0 )
+71/navigation_offset = Vector2( 0, 0 )
+71/shape_offset = Vector2( 0, 0 )
+71/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+71/shape_one_way = false
+71/shape_one_way_margin = 0.0
+71/shapes = [  ]
+71/z_index = 0
+72/name = "Space Cave Tileset.png 72"
+72/texture = ExtResource( 4 )
+72/tex_offset = Vector2( 0, 0 )
+72/modulate = Color( 1, 1, 1, 1 )
+72/region = Rect2( 176, 48, 16, 16 )
+72/tile_mode = 0
+72/occluder_offset = Vector2( 0, 0 )
+72/navigation_offset = Vector2( 0, 0 )
+72/shape_offset = Vector2( 0, 0 )
+72/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+72/shape = SubResource( 28 )
+72/shape_one_way = false
+72/shape_one_way_margin = 1.0
+72/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 28 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+72/z_index = 0
+73/name = "Space Cave Tileset.png 73"
+73/texture = ExtResource( 4 )
+73/tex_offset = Vector2( 0, 0 )
+73/modulate = Color( 1, 1, 1, 1 )
+73/region = Rect2( 80, 0, 16, 16 )
+73/tile_mode = 0
+73/occluder_offset = Vector2( 0, 0 )
+73/navigation_offset = Vector2( 0, 0 )
+73/shape_offset = Vector2( 0, 0 )
+73/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+73/shape = SubResource( 29 )
+73/shape_one_way = false
+73/shape_one_way_margin = 1.0
+73/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 29 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+73/z_index = 0
+74/name = "LaserSprite.png 74"
+74/texture = ExtResource( 15 )
+74/tex_offset = Vector2( 0, 0 )
+74/modulate = Color( 1, 1, 1, 1 )
+74/region = Rect2( 0, 0, 16, 16 )
+74/tile_mode = 0
+74/occluder_offset = Vector2( 0, 0 )
+74/navigation_offset = Vector2( 0, 0 )
+74/shape_offset = Vector2( 0, 0 )
+74/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+74/shape_one_way = false
+74/shape_one_way_margin = 0.0
+74/shapes = [  ]
+74/z_index = 0
+75/name = "LaserSpriteHorizontal.png 75"
+75/texture = ExtResource( 16 )
+75/tex_offset = Vector2( 0, 0 )
+75/modulate = Color( 1, 1, 1, 1 )
+75/region = Rect2( 0, 0, 16, 16 )
+75/tile_mode = 0
+75/occluder_offset = Vector2( 0, 0 )
+75/navigation_offset = Vector2( 0, 0 )
+75/shape_offset = Vector2( 0, 0 )
+75/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+75/shape_one_way = false
+75/shape_one_way_margin = 0.0
+75/shapes = [  ]
+75/z_index = 0
+
+[sub_resource type="DynamicFont" id=33]
+size = 19
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=34]
+size = 29
+font_data = ExtResource( 3 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="iPhone" type="KinematicBody2D" parent="."]
+position = Vector2( -106.256, 23.3867 )
+scale = Vector2( 0.25, 0.25 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+WalkingSpeed = 25.0
+RunningSpeed = 62.0
+GravitySpeed = 7.0
+JumpingSpeed = 137.0
+BoostDiSpeed = 62.0
+CamFollowDistance = 75.0
+
+[node name="Sprite" type="Sprite" parent="iPhone"]
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 1 )
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="iPhone"]
+shape = SubResource( 1 )
+
+[node name="CameraFollow" type="Node2D" parent="iPhone"]
+position = Vector2( 0, 200 )
+
+[node name="Camera2D" type="Camera2D" parent="iPhone/CameraFollow"]
+position = Vector2( 0, -190 )
+current = true
+zoom = Vector2( 0.3, 0.3 )
+smoothing_enabled = true
+smoothing_speed = 2.5
+
+[node name="CanvasLayer" type="CanvasLayer" parent="iPhone/CameraFollow/Camera2D"]
+
+[node name="Control" type="Control" parent="iPhone/CameraFollow/Camera2D/CanvasLayer"]
+anchor_left = -0.0263186
+anchor_top = 3.77301
+anchor_right = 0.973681
+anchor_bottom = 4.77301
+margin_left = 518.459
+margin_top = 296.918
+margin_right = 518.459
+margin_bottom = 296.918
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="PopupMenu" type="PopupMenu" parent="iPhone/CameraFollow/Camera2D/CanvasLayer/Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+popup_exclusive = true
+script = ExtResource( 7 )
+
+[node name="Button" type="Button" parent="iPhone/CameraFollow/Camera2D/CanvasLayer/Control/PopupMenu"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -420.871
+margin_top = -79.3571
+margin_right = -54.8706
+margin_bottom = 83.6429
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_fonts/font = SubResource( 2 )
+text = "Main Menu"
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2" type="Button" parent="iPhone/CameraFollow/Camera2D/CanvasLayer/Control/PopupMenu"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 52.7277
+margin_top = -75.0711
+margin_right = 418.728
+margin_bottom = 87.9289
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_fonts/font = SubResource( 2 )
+text = "Ckeckpoint"
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="iPhone/CameraFollow/Camera2D/CanvasLayer/Control/PopupMenu"]
+visible = false
+margin_left = 82.7451
+margin_top = 1.19815
+margin_right = 826.745
+margin_bottom = 500.198
+custom_fonts/font = SubResource( 3 )
+text = "Bot 167: Oh no! you died.. Better luck
+Next time!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Acheivement Panel" type="Panel" parent="iPhone/CameraFollow/Camera2D/CanvasLayer"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 20.0
+margin_top = -140.0
+margin_right = 320.0
+margin_bottom = -20.0
+rect_min_size = Vector2( 420, 120 )
+script = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="iPhone/CameraFollow/Camera2D/CanvasLayer/Acheivement Panel"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 10.0
+margin_top = -70.0
+margin_right = 70.0
+margin_bottom = -10.0
+texture = ExtResource( 12 )
+expand = true
+stretch_mode = 6
+script = SubResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="iPhone/CameraFollow/Camera2D/CanvasLayer/Acheivement Panel"]
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 122.0
+margin_bottom = 30.0
+custom_fonts/font = SubResource( 5 )
+text = "Achievement unlocked"
+script = SubResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Timer" parent="iPhone/CameraFollow/Camera2D/CanvasLayer/Acheivement Panel"]
+wait_time = 4.0
+one_shot = true
+
+[node name="Label2" type="Label" parent="iPhone/CameraFollow/Camera2D/CanvasLayer/Acheivement Panel"]
+margin_left = 100.0
+margin_top = 50.0
+margin_right = 420.0
+margin_bottom = 100.0
+custom_fonts/font = SubResource( 6 )
+text = "Achievement text goes here..."
+autowrap = true
+script = SubResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PauseMenu" type="Control" parent="iPhone/CameraFollow/Camera2D/CanvasLayer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PopupPanel" type="PopupPanel" parent="iPhone/CameraFollow/Camera2D/CanvasLayer/PauseMenu"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 19 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="iPhone/CameraFollow/Camera2D/CanvasLayer/PauseMenu/PopupPanel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -508.0
+margin_top = -296.0
+margin_right = 508.0
+margin_bottom = 296.0
+custom_fonts/font = SubResource( 7 )
+text = "Press [Control] and \"A\" for ambulance.
+
+Press ! and \"F\" for FireFighters.
+
+if !Press == True:
+	p 
+(no shift)
+"
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="iPhone/CameraFollow/Camera2D/CanvasLayer/PauseMenu/PopupPanel"]
+margin_left = 4.0
+margin_top = 4.0
+margin_right = 1020.0
+margin_bottom = 596.0
+shortcut_in_tooltip = false
+button_mask = 3
+shortcut = SubResource( 9 )
+text = "Pick Up Mode"
+script = ExtResource( 20 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HSlider" type="HSlider" parent="iPhone/CameraFollow/Camera2D/CanvasLayer/PauseMenu/PopupPanel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -508.0
+margin_top = -296.0
+margin_right = 508.0
+margin_bottom = 296.0
+
+[node name="Label2" type="Label" parent="iPhone/CameraFollow/Camera2D/CanvasLayer/PauseMenu/PopupPanel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -508.0
+margin_top = -296.0
+margin_right = 508.0
+margin_bottom = 296.0
+custom_fonts/font = SubResource( 7 )
+text = "
+Volume:"
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="iPhone detector" type="Label" parent="iPhone"]
+margin_left = -50.0
+margin_top = -45.0
+margin_right = 56.0
+margin_bottom = -31.0
+text = "iPhone 1"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="iPhone"]
+margin_left = 1331.0
+margin_top = 324.0
+margin_right = 1555.0
+margin_bottom = 416.0
+custom_fonts/font = SubResource( 10 )
+text = "Game Code"
+script = ExtResource( 14 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AmbulanceWEEWOOWEEWOOWEEWOO" type="Sprite" parent="iPhone"]
+visible = false
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 18 )
+
+[node name="TileMap" type="TileMap" parent="."]
+scale = Vector2( 1, 0.879999 )
+tile_set = SubResource( 32 )
+cell_size = Vector2( 16, 16 )
+show_collision = true
+format = 1
+tile_data = PoolIntArray( -2359342, 6, 0, -2359341, 6, 0, -2359340, 6, 0, -2359339, 6, 0, -2359338, 6, 0, -2359337, 6, 0, -2359336, 6, 0, -2359335, 6, 0, -2359334, 6, 0, -2359333, 6, 0, -2359332, 6, 0, -2293806, 3, 0, -2293805, 33, 0, -2293802, 33, 0, -2293800, 33, 0, -2293798, 33, 0, -2293797, 33, 0, -2293796, 4, 0, -2228270, 3, 0, -2228260, 4, 0, -2162734, 3, 0, -2162727, 11, 0, -2162724, 4, 0, -2097198, 3, 0, -2097196, 11, 0, -2097188, 4, 0, -2031662, 3, 0, -2031652, 4, 0, -1966126, 5, 0, -1966125, 71, 0, -1966119, 64, 0, -1966118, 6, 0, -1966117, 6, 0, -1966116, 14, 0, -1966115, 51, 0, -1900588, 3, 0, -1900587, 51, 0, -1900583, 4, 0, -1900580, 51, 0, -1900579, 4, 0, -1835052, 3, 0, -1835047, 4, 0, -1835043, 4, 0, -1769516, 3, 0, -1769512, 51, 0, -1769511, 4, 0, -1769507, 4, 0, -1703985, 68, 0, -1703984, 70, 0, -1703981, 51, 0, -1703980, 3, 0, -1703975, 4, 0, -1703971, 4, 0, -1638449, 68, 0, -1638445, 3, 0, -1638444, 51, 0, -1638441, 52, 0, -1638440, 54, 0, -1638439, 52, 0, -1638436, 51, 0, -1638435, 4, 0, -1572913, 68, 0, -1572912, 71, 0, -1572909, 3, 0, -1572905, 53, 0, -1572904, 53, 0, -1572903, 53, 0, -1572899, 4, 0, -1507377, 68, 0, -1507375, 2, 0, -1507373, 3, 0, -1507372, 54, 0, -1507370, 57, 0, -1507369, 53, 0, -1507368, 53, 0, -1507367, 53, 0, -1507366, 55, 0, -1507364, 54, 0, -1507363, 4, 0, -1441840, 70, 0, -1441837, 3, 0, -1441836, 1, 0, -1441833, 53, 0, -1441832, 53, 0, -1441831, 53, 0, -1441828, 1, 0, -1441827, 4, 0, -1376301, 3, 0, -1376300, 20, 0, -1376299, 44, 0, -1376298, 44, 0, -1376297, 44, 0, -1376296, 56, 0, -1376295, 44, 0, -1376294, 44, 0, -1376293, 44, 0, -1376292, 19, 0, -1376291, 4, 0, -1310765, 3, 0, -1310764, 4, 0, -1310763, 45, 0, -1310762, 45, 0, -1310761, 45, 0, -1310760, 45, 0, -1310759, 45, 0, -1310758, 45, 0, -1310757, 45, 0, -1310756, 3, 0, -1310755, 4, 0, -1245229, 3, 0, -1245228, 20, 0, -1245227, 45, 0, -1245226, 45, 0, -1245225, 45, 0, -1245224, 52, 0, -1245223, 45, 0, -1245222, 45, 0, -1245221, 45, 0, -1245220, 19, 0, -1245219, 4, 0, -1245206, 49, 0, -1245205, 49, 0, -1245204, 49, 0, -1245203, 49, 0, -1245202, 49, 0, -1245201, 49, 0, -1179693, 5, 0, -1179692, 8, 0, -1179691, 13, 0, -1179690, 12, 0, -1179689, 12, 0, -1179688, 1, 0, -1179687, 12, 0, -1179686, 12, 0, -1179685, 15, 0, -1179684, 7, 0, -1179683, 14, 0, -1179670, 49, 0, -1179669, 49, 0, -1179668, 49, 0, -1179667, 49, 0, -1179666, 49, 0, -1179665, 49, 0, -1114156, 4, 0, -1114154, 51, 0, -1114153, 51, 0, -1114152, 51, 0, -1114151, 51, 0, -1114149, 51, 0, -1114148, 3, 0, -1114143, 54, 0, -1114134, 49, 0, -1114133, 49, 0, -1114132, 49, 0, -1114131, 49, 0, -1114130, 49, 0, -1114129, 49, 0, -1048620, 4, 0, -1048612, 3, 0, -1048598, 49, 0, -1048597, 49, 0, -1048596, 49, 0, -1048595, 49, 0, -1048594, 49, 0, -1048593, 49, 0, -983084, 4, 0, -983083, 13, 0, -983082, 12, 0, -983081, 12, 0, -983080, 12, 0, -983079, 12, 0, -983078, 12, 0, -983077, 15, 0, -983076, 3, 0, -983062, 49, 0, -983061, 49, 0, -983060, 49, 0, -983059, 49, 0, -983058, 49, 0, -983057, 49, 0, -917548, 4, 0, -917547, 51, 0, -917540, 3, 0, -917526, 49, 0, -917525, 49, 0, -917524, 49, 0, -917523, 49, 0, -917522, 49, 0, -917521, 49, 0, -852046, 51, 0, -852012, 4, 0, -852011, 51, 0, -852010, 49, 0, -852009, 49, 0, -852008, 49, 0, -852007, 49, 0, -852006, 49, 0, -852005, 49, 0, -852004, 3, 0, -852003, 54, 0, -851994, 52, 0, -851993, 52, 0, -851990, 49, 0, -851989, 49, 0, -851988, 49, 0, -851987, 49, 0, -851986, 49, 0, -851985, 49, 0, -786510, 51, 0, -786476, 4, 0, -786475, 51, 0, -786474, 49, 0, -786473, 49, 0, -786472, 49, 0, -786471, 49, 0, -786470, 49, 0, -786469, 49, 0, -786468, 3, 0, -786467, 54, 0, -786460, 16, 0, -786459, 17, 0, -786458, 17, 0, -786457, 17, 0, -786456, 17, 0, -786455, 18, 0, -786454, 49, 0, -786453, 49, 0, -786452, 49, 0, -786451, 49, 0, -786450, 49, 0, -786449, 49, 0, -720974, 51, 0, -720955, 46, 0, -720940, 4, 0, -720939, 51, 0, -720938, 51, 0, -720937, 51, 0, -720936, 51, 0, -720935, 51, 0, -720934, 51, 0, -720933, 49, 0, -720932, 3, 0, -720931, 51, 0, -720924, 19, 0, -720919, 20, 0, -720918, 49, 0, -720917, 49, 0, -720916, 49, 0, -720915, 49, 0, -720914, 49, 0, -720913, 49, 0, -655445, 46, 0, -655444, 46, 0, -655443, 46, 0, -655421, 46, 0, -655410, 22, 0, -655409, 22, 0, -655408, 22, 0, -655407, 22, 0, -655404, 4, 0, -655403, 11, 0, -655402, 11, 0, -655401, 11, 0, -655400, 11, 0, -655399, 11, 0, -655398, 11, 0, -655397, 11, 0, -655396, 3, 0, -655394, 51, 0, -655388, 19, 0, -655383, 20, 0, -655382, 49, 0, -655381, 49, 0, -655380, 49, 0, -655379, 49, 0, -655378, 49, 0, -655377, 49, 0, -589907, 46, 0, -589906, 46, 0, -589905, 46, 0, -589873, 49, 0, -589872, 49, 0, -589867, 3, 0, -589864, 11, 0, -589863, 11, 0, -589862, 11, 0, -589861, 15, 0, -589857, 51, 0, -589852, 19, 0, -589847, 20, 0, -589846, 49, 0, -589845, 49, 0, -589844, 49, 0, -589843, 49, 0, -589842, 49, 0, -589841, 49, 0, -524375, 47, 0, -524374, 47, 0, -524373, 47, 0, -524372, 47, 0, -524371, 47, 0, -524369, 46, 0, -524347, 69, 0, -524337, 49, 0, -524336, 49, 0, -524331, 3, 0, -524330, 4, 0, -524329, 11, 0, -524328, 11, 0, -524320, 1, 0, -524319, 17, 0, -524318, 1, 0, -524317, 1, 0, -524316, 5, 0, -524315, 6, 0, -524314, 6, 0, -524313, 22, 0, -524312, 22, 0, -524311, 23, 0, -524310, 12, 0, -524309, 13, 0, -524308, 13, 0, -524307, 13, 0, -524306, 13, 0, -524305, 13, 0, -524304, 54, 0, -524303, 52, 0, -589818, 1, 0, -458838, 49, 0, -458837, 49, 0, -458836, 49, 0, -458833, 46, 0, -458815, 46, 0, -458811, 69, 0, -458806, 51, 0, -458805, 51, 0, -458804, 51, 0, -458803, 51, 0, -458801, 49, 0, -458800, 49, 0, -458795, 3, 0, -458794, 4, 0, -458774, 33, 0, -458771, 32, 0, -458769, 32, 0, -458768, 1, 0, -458767, 1, 0, -458766, 2, 0, -458765, 75, 0, -458764, 75, 0, -458763, 75, 0, -458762, 3, 0, -524287, 41, 0, -524283, 41, 0, -524281, 1, 0, -393302, 49, 0, -393301, 49, 0, -393300, 49, 0, -393298, 63, 0, -393297, 46, 0, -393296, 46, 0, -393295, 63, 0, -393275, 69, 0, -393270, 51, 0, -393269, 54, 0, -393268, 52, 0, -393267, 51, 0, -393265, 49, 0, -393264, 49, 0, -393259, 3, 0, -393258, 4, 0, -393229, 1, 0, -393228, 1, 0, -393227, 1, 0, -393217, 1, 0, -458752, 1, 0, -458751, 1, 0, -458750, 1, 0, -458749, 1, 0, -458748, 1, 0, -458747, 1, 0, -458744, 1, 0, -327769, 1, 0, -327766, 49, 0, -327765, 49, 0, -327764, 49, 0, -327761, 64, 0, -327760, 59, 0, -327757, 73, 0, -327756, 73, 0, -327755, 73, 0, -327754, 73, 0, -327753, 73, 0, -327752, 73, 0, -327751, 73, 0, -327750, 73, 0, -327749, 4, 0, -327748, 6, 0, -327747, 6, 0, -327746, 6, 0, -327745, 6, 0, -327744, 6, 0, -327743, 6, 0, -327741, 0, 0, -327740, 1, 0, -327739, 1, 0, -327738, 1, 0, -327737, 1, 0, -327736, 1, 0, -327735, 1, 0, -327734, 1, 0, -327733, 1, 0, -327732, 1, 0, -327731, 1, 0, -327730, 1, 0, -327729, 49, 0, -327728, 49, 0, -327727, 70, 0, -327726, 70, 0, -327725, 70, 0, -327724, 70, 0, -327722, 5, 0, -327721, 3, 0, -327702, 28, 0, -327701, 29, 0, -327700, 29, 0, -327699, 29, 0, -327698, 29, 0, -327697, 30, 0, -327691, 41, 0, -393211, 74, 0, -393209, 1, 0, -393195, 69, 0, -262236, 12, 0, -262235, 12, 0, -262234, 12, 0, -262233, 12, 0, -262232, 12, 0, -262231, 12, 0, -262230, 12, 0, -262229, 12, 0, -262228, 12, 0, -262227, 12, 0, -262225, 1, 0, -262224, 1, 0, -262222, 51, 0, -262213, 4, 0, -262205, 3, 0, -262193, 49, 0, -262192, 49, 0, -262185, 3, 0, -262159, 1, 0, -262158, 1, 0, -262157, 1, 0, -262156, 1, 0, -262155, 1, 0, -262154, 1, 0, -262153, 1, 0, -262152, 1, 0, -262147, 4, 0, -327675, 74, 0, -327673, 3, 0, -196691, 1, 0, -196690, 1, 0, -196689, 1, 0, -196688, 1, 0, -196687, 1, 0, -196686, 51, 0, -196677, 4, 0, -196669, 3, 0, -196657, 49, 0, -196656, 49, 0, -196649, 3, 0, -196618, 4, 0, -196611, 4, 0, -262139, 74, 0, -262137, 3, 0, -131141, 4, 0, -131134, 1, 0, -131133, 3, 0, -131121, 49, 0, -131120, 49, 0, -131113, 3, 0, -131082, 4, 0, -131078, 38, 0, -131077, 3, 0, -131076, 47, 0, -131075, 47, 0, -131074, 47, 0, -131073, 47, 0, -196603, 74, 0, -196601, 3, 0, -196587, 69, 0, -65605, 4, 0, -65601, 51, 0, -65600, 1, 0, -65597, 3, 0, -65585, 49, 0, -65584, 49, 0, -65577, 3, 0, -65568, 54, 0, -65567, 54, 0, -65546, 4, 0, -65542, 38, 0, -65541, 3, 0, -65539, 48, 0, -65538, 49, 0, -131067, 74, 0, -131065, 3, 0, -69, 4, 0, -61, 3, 0, -49, 49, 0, -48, 49, 0, -41, 3, 0, -32, 11, 0, -31, 13, 0, -30, 11, 0, -29, 11, 0, -10, 4, 0, -5, 51, 0, -3, 48, 0, -2, 49, 0, -65531, 74, 0, -65529, 3, 0, 65467, 4, 0, 65469, 1, 0, 65475, 3, 0, 65487, 49, 0, 65488, 49, 0, 65495, 3, 0, 65496, 52, 0, 65502, 11, 0, 65503, 11, 0, 65526, 4, 0, 65527, 35, 0, 65528, 1, 0, 65529, 1, 0, 65533, 48, 0, 65534, 49, 0, 0, 33, 0, 5, 74, 0, 7, 3, 0, 131003, 4, 0, 131011, 3, 0, 131023, 49, 0, 131032, 1, 0, 131033, 11, 0, 131034, 11, 0, 131035, 11, 0, 131036, 11, 0, 131037, 11, 0, 131062, 4, 0, 131063, 35, 0, 131069, 48, 0, 131070, 49, 0, 65536, 9, 0, 65537, 13, 0, 65538, 12, 0, 65539, 12, 0, 65540, 15, 0, 65541, 74, 0, 65543, 3, 0, 196539, 4, 0, 196544, 1, 0, 196546, 51, 0, 196547, 3, 0, 196560, 49, 0, 196598, 4, 0, 196599, 36, 0, 196603, 41, 0, 196604, 41, 0, 196605, 48, 0, 196606, 49, 0, 131077, 74, 0, 131078, 37, 0, 131079, 3, 0, 262075, 4, 0, 262078, 6, 0, 262079, 51, 0, 262083, 3, 0, 262134, 9, 0, 262135, 1, 0, 262136, 1, 0, 262137, 1, 0, 262138, 1, 0, 262139, 1, 0, 262140, 1, 0, 262141, 1, 0, 262142, 1, 0, 262143, 1, 0, 196608, 1, 0, 196609, 1, 0, 196610, 1, 0, 196611, 1, 0, 196612, 1, 0, 196613, 1, 0, 196614, 1, 0, 196615, 10, 0, 327611, 4, 0, 327619, 3, 0, 393147, 4, 0, 393148, 51, 0, 393152, 6, 0, 393155, 3, 0, 458683, 4, 0, 458691, 3, 0, 524219, 4, 0, 524223, 51, 0, 524227, 3, 0, 589755, 4, 0, 589757, 6, 0, 589763, 3, 0, 655291, 4, 0, 655297, 6, 0, 655299, 3, 0, 720827, 4, 0, 720835, 3, 0, 786363, 4, 0, 786371, 3, 0, 851899, 4, 0, 851901, 1, 0, 851904, 71, 0, 851907, 3, 0, 917435, 4, 0, 917443, 3, 0, 982971, 4, 0, 982978, 1, 0, 982979, 3, 0, 1048507, 4, 0, 1048515, 3, 0, 1114043, 4, 0, 1114046, 1, 0, 1114048, 58, 0, 1114051, 3, 0, 1179579, 4, 0, 1179584, 1, 0, 1179586, 43, 0, 1179587, 3, 0, 1245115, 4, 0, 1245123, 3, 0, 1310651, 4, 0, 1310654, 41, 0, 1310659, 3, 0, 1376187, 4, 0, 1376190, 1, 0, 1376195, 3, 0, 1376199, 69, 0, 1376201, 68, 0, 1441723, 4, 0, 1441729, 1, 0, 1441731, 3, 0, 1507259, 4, 0, 1507267, 3, 0, 1507270, 68, 0, 1507274, 69, 0, 1572795, 4, 0, 1572803, 3, 0, 1572807, 70, 0, 1572808, 70, 0, 1572809, 70, 0, 1638331, 4, 0, 1638334, 11, 0, 1638339, 3, 0, 1703867, 4, 0, 1703875, 3, 0, 1769403, 4, 0, 1769411, 3, 0, 1834939, 4, 0, 1834945, 11, 0, 1834947, 3, 0, 1900475, 4, 0, 1966011, 4, 0 )
+
+[node name="Label" type="Label" parent="TileMap"]
+margin_left = -258.29
+margin_top = -38.2109
+margin_right = -148.29
+margin_bottom = 72.7891
+text = "Press the space
+bar when you are
+on a wall to 
+walljump."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="TileMap"]
+margin_left = -893.153
+margin_top = -197.379
+margin_right = -771.153
+margin_bottom = -47.3786
+text = "SOOOO... You want this checkpoint and upgrade? 
+I can tell you a hint. What TIME is it? ahh, lets just play the game by CLICKING to jump."
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 579.98
+margin_top = -90.3181
+margin_right = 1274.99
+margin_bottom = 181.682
+rect_rotation = 0.118729
+custom_fonts/font = SubResource( 33 )
+text = "Hello!
+And welcome to the game.
+My name is Bot167.
+Nice to meat you!
+Sorry about that pun. 
+I like protien
+Now, go on! 
+Play the game.
+every moment, come here
+I might tell you something.
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 379.321
+margin_top = 130.288
+margin_right = 498.321
+margin_bottom = 161.288
+custom_fonts/font = SubResource( 34 )
+text = "Need to call 911?
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 17 )
+volume_db = -20.0
+autoplay = true
+
+[connection signal="died" from="iPhone" to="iPhone/CameraFollow/Camera2D/CanvasLayer/Control/PopupMenu" method="_on_iPhone_died"]
+[connection signal="timeout" from="iPhone/CameraFollow/Camera2D/CanvasLayer/Acheivement Panel/Timer" to="iPhone/CameraFollow/Camera2D/CanvasLayer/Acheivement Panel" method="_on_Timer_timeout"]
