@@ -23,7 +23,12 @@ onready var Tiles: TileMap = get_tree().root.get_node("Node2D").get_node("TileMa
 
 func _ready():
 	randomize()
-	position = SaveManager.pos
+	
+	if SaveManager.pos == null:
+		SaveManager.pos = position
+	else:
+		position = SaveManager.pos
+	
 	Upgrades = SaveManager.level
 	CheckPoint = position
 	$CameraFollow.position.x = CamFollowDistance

@@ -1,11 +1,15 @@
 extends Node
 
-var pos = Vector2(-105, 38)
+var pos = null
 var level = 1
 
 func LoadGame():
 	var file = File.new()
 	file.open("user://FileGame.sav", File.READ)
+	
+	if pos == null:
+		pos = Vector2()
+	
 	pos.x = file.get_float()
 	pos.y = file.get_float()
 	level = file.get_16()
@@ -23,6 +27,5 @@ func NewGame():
 	var file = File.new()
 	file.open("user://FileGame.sav", File.WRITE)
 	file.close()
-	pos.x = -105
-	pos.y = 38
+	pos = null
 	level = 1
