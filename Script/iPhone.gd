@@ -99,6 +99,11 @@ func _process(_delta):
 		
 		if Upgrades == 1:
 			message += "Press the [SHIFT] key to run"
+		elif Upgrades == 3:
+			message += "There is no need to worry about the darkness anymore. You have flashlight mode turned on automatically!"
+			$BasicLight.visible = false
+			get_tree().root.get_node("Node2D").get_node("CanvasModulate").visible = false
+			get_tree().root.get_node("Node2D").get_node("ParallaxBackground/ParallaxLayer/CanvasModulate").visible = false
 		elif Upgrades == 6:
 			message += "You can now boost by pressing the [TAB] key"
 		
